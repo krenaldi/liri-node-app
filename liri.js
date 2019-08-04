@@ -182,15 +182,15 @@ function doThis() {
                     });
                 });
         } else if (dataArr[0] == "concert-this") {
-            var artist = dataArr[1];
+            var artist = dataArr[1].split(" ").join("+").replace(/"/g,"");
+            //console.log(artist);
             // Then run a request with axios to the BandsInTown API with the artist specified
             var queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
-
             //console.log(queryUrl);
-
             axios.get(queryUrl).then(
                 function (response) {
                     var jsonData = response.data;
+                    //console.log(jsonData);
                     var eventDate = jsonData[0].datetime;
                     var convertedDate = moment(eventDate).format("MM/DD/YYYY");
                     //console.log(convertedDate);
@@ -198,7 +198,7 @@ function doThis() {
                         "Venue: " + jsonData[0].venue.name,
                         "Location: " + jsonData[0].venue.city + ", " + jsonData[0].venue.region + " " + jsonData[0].venue.country,
                         "Date of Event: " + convertedDate
-                    ].join("\n")
+                    ].join("\n");
                     console.log(divider + showData + divider);
                     var datetime = new Date();
                     var logdate = moment(datetime).format("LL LTS");
@@ -425,7 +425,7 @@ function concertThis() {
     // Then run a request with axios to the BandsInTown API with the artist specified
     var queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
 
-    //console.log(queryUrl);
+    console.log(queryUrl);
 
     axios.get(queryUrl).then(
         function (response) {
@@ -437,7 +437,7 @@ function concertThis() {
                 "Venue: " + jsonData[0].venue.name,
                 "Location: " + jsonData[0].venue.city + ", " + jsonData[0].venue.region + " " + jsonData[0].venue.country,
                 "Date of Event: " + convertedDate
-            ].join("\n")
+            ].join("\n");
             console.log(divider + showData + divider);
             var datetime = new Date();
             var logdate = moment(datetime).format("LL LTS");
