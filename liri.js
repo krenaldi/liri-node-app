@@ -425,7 +425,7 @@ function concertThis() {
     // Then run a request with axios to the BandsInTown API with the artist specified
     var queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
 
-    console.log(queryUrl);
+    //console.log(queryUrl);
 
     axios.get(queryUrl).then(
         function (response) {
