@@ -64,3 +64,7 @@ The parameters are:
 * It should run `spotify-this-song` for "Bohemian Rhapsody" as follows the text in `random.txt`.
 
 * The text in random.txt can also be edited to run movie-this and concert-this as well.
+
+### View following YouTube video link for demo
+
+[![LIRI Node App Demo]https://img.youtube.com/vi/k509dLNH3QY/hqdefault.jpg)](https://youtu.be/k509dLNH3QY)
