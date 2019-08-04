@@ -78,7 +78,6 @@ function doThis() {
                 var datetime = new Date();
                 var logdate = moment(datetime).format("LL LTS");
                 //console.log(logdate);
-                console.log(divider + showData + divider);
                 var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + showData + divider + logbreak;
                 fs.appendFile("log.txt", data, function (err) {
                     if (err) {
@@ -111,7 +110,6 @@ function doThis() {
                     var datetime = new Date();
                     var logdate = moment(datetime).format("LL LTS");
                     //console.log(logdate);
-                    console.log(divider + showData + divider);
                     var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + showData + divider + logbreak;
                     fs.appendFile("log.txt", data, function (err) {
                         if (err) {
@@ -135,7 +133,7 @@ function doThis() {
                         var datetime = new Date();
                         var logdate = moment(datetime).format("LL LTS");
                         //console.log(logdate);
-                        console.log(divider + showData + divider);
+                        console.log(error);
                         var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + error + divider + logbreak;
                         fs.appendFile("log.txt", data, function (err) {
                             if (err) {
@@ -150,7 +148,6 @@ function doThis() {
                         var datetime = new Date();
                         var logdate = moment(datetime).format("LL LTS");
                         //console.log(logdate);
-                        console.log(divider + showData + divider);
                         var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + "NO RESPONSE FROM SERVER: " + error.request + divider + logbreak;
                         fs.appendFile("log.txt", data, function (err) {
                             if (err) {
@@ -164,7 +161,6 @@ function doThis() {
                         var datetime = new Date();
                         var logdate = moment(datetime).format("LL LTS");
                         //console.log(logdate);
-                        console.log(divider + showData + divider);
                         var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + "Error: " + error.message + divider + logbreak;
                         fs.appendFile("log.txt", data, function (err) {
                             if (err) {
@@ -177,7 +173,6 @@ function doThis() {
                     var datetime = new Date();
                     var logdate = moment(datetime).format("LL LTS");
                     //console.log(logdate);
-                    console.log(divider + showData + divider);
                     var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + error.config + divider + logbreak;
                     fs.appendFile("log.txt", data, function (err) {
                         if (err) {
@@ -208,7 +203,6 @@ function doThis() {
                     var datetime = new Date();
                     var logdate = moment(datetime).format("LL LTS");
                     //console.log(logdate);
-                    console.log(divider + showData + divider);
                     var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + showData + divider + logbreak;
                     fs.appendFile("log.txt", data, function (err) {
                         if (err) {
@@ -229,10 +223,10 @@ function doThis() {
                             "---------------Headers---------------",
                             error.response.headers
                         ].join("\n");
+                        console.log(error);
                         var datetime = new Date();
                         var logdate = moment(datetime).format("LL LTS");
                         //console.log(logdate);
-                        console.log(divider + showData + divider);
                         var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + error + divider + logbreak;
                         fs.appendFile("log.txt", data, function (err) {
                             if (err) {
@@ -247,7 +241,6 @@ function doThis() {
                         var datetime = new Date();
                         var logdate = moment(datetime).format("LL LTS");
                         //console.log(logdate);
-                        console.log(divider + showData + divider);
                         var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + "NO RESPONSE FROM SERVER: " + error.request + divider + logbreak;
                         fs.appendFile("log.txt", data, function (err) {
                             if (err) {
@@ -261,7 +254,6 @@ function doThis() {
                         var datetime = new Date();
                         var logdate = moment(datetime).format("LL LTS");
                         //console.log(logdate);
-                        console.log(divider + showData + divider);
                         var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + "Error: " + error.message + divider + logbreak;
                         fs.appendFile("log.txt", data, function (err) {
                             if (err) {
@@ -274,7 +266,6 @@ function doThis() {
                     var datetime = new Date();
                     var logdate = moment(datetime).format("LL LTS");
                     //console.log(logdate);
-                    console.log(divider + showData + divider);
                     var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + error.config + divider + logbreak;
                     fs.appendFile("log.txt", data, function (err) {
                         if (err) {
@@ -350,10 +341,10 @@ function movieThis() {
                 "Plot: " + jsonData.Plot,
                 "Actors: " + jsonData.Actors
             ].join("\n");
+            console.log(divider + showData + divider);
             var datetime = new Date();
             var logdate = moment(datetime).format("LL LTS");
             //console.log(logdate);
-            console.log(divider + showData + divider);
             var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + showData + divider + logbreak;
             fs.appendFile("log.txt", data, function (err) {
                 if (err) {
@@ -377,7 +368,7 @@ function movieThis() {
                 var datetime = new Date();
                 var logdate = moment(datetime).format("LL LTS");
                 //console.log(logdate);
-                console.log(divider + showData + divider);
+                console.log(error);
                 var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + error + divider + logbreak;
                 fs.appendFile("log.txt", data, function (err) {
                     if (err) {
@@ -392,7 +383,6 @@ function movieThis() {
                 var datetime = new Date();
                 var logdate = moment(datetime).format("LL LTS");
                 //console.log(logdate);
-                console.log(divider + showData + divider);
                 var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + "NO RESPONSE FROM SERVER: " + error.request + divider + logbreak;
                 fs.appendFile("log.txt", data, function (err) {
                     if (err) {
@@ -406,7 +396,6 @@ function movieThis() {
                 var datetime = new Date();
                 var logdate = moment(datetime).format("LL LTS");
                 //console.log(logdate);
-                console.log(divider + showData + divider);
                 var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + "Error: " + error.message + divider + logbreak;
                 fs.appendFile("log.txt", data, function (err) {
                     if (err) {
@@ -419,7 +408,6 @@ function movieThis() {
             var datetime = new Date();
             var logdate = moment(datetime).format("LL LTS");
             //console.log(logdate);
-            console.log(divider + showData + divider);
             var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + error.config + divider + logbreak;
             fs.appendFile("log.txt", data, function (err) {
                 if (err) {
@@ -454,7 +442,6 @@ function concertThis() {
             var datetime = new Date();
             var logdate = moment(datetime).format("LL LTS");
             //console.log(logdate);
-            console.log(divider + showData + divider);
             var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + showData + divider + logbreak;
             fs.appendFile("log.txt", data, function (err) {
                 if (err) {
@@ -475,10 +462,10 @@ function concertThis() {
                     "---------------Headers---------------",
                     error.response.headers
                 ].join("\n");
+                console.log(error);
                 var datetime = new Date();
                 var logdate = moment(datetime).format("LL LTS");
                 //console.log(logdate);
-                console.log(divider + showData + divider);
                 var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + error + divider + logbreak;
                 fs.appendFile("log.txt", data, function (err) {
                     if (err) {
@@ -493,7 +480,6 @@ function concertThis() {
                 var datetime = new Date();
                 var logdate = moment(datetime).format("LL LTS");
                 //console.log(logdate);
-                console.log(divider + showData + divider);
                 var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + "NO RESPONSE FROM SERVER: " + error.request + divider + logbreak;
                 fs.appendFile("log.txt", data, function (err) {
                     if (err) {
@@ -507,7 +493,6 @@ function concertThis() {
                 var datetime = new Date();
                 var logdate = moment(datetime).format("LL LTS");
                 //console.log(logdate);
-                console.log(divider + showData + divider);
                 var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + "Error: " + error.message + divider + logbreak;
                 fs.appendFile("log.txt", data, function (err) {
                     if (err) {
@@ -520,7 +505,6 @@ function concertThis() {
             var datetime = new Date();
             var logdate = moment(datetime).format("LL LTS");
             //console.log(logdate);
-            console.log(divider + showData + divider);
             var data = logdate + " " + action + " " + process.argv.slice(3).join(" ") + "\r" + divider + error.config + divider + logbreak;
             fs.appendFile("log.txt", data, function (err) {
                 if (err) {
