@@ -67,4 +67,4 @@ The parameters are:
 
 ### View following YouTube video link for demo
 
-[![LIRI Node App Demo](https://img.youtube.com/vi/-oU24cLtkug/hqdefault.jpg)](https://youtu.be/-oU24cLtkug)
+[![LIRI Node App Demo](https://img.youtube.com/vi/-oU24cLtkug/hqdefault.jpg)](https://youtu.be/sYE5-vMXrJ0)
